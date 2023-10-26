@@ -1,4 +1,4 @@
-package com.fan.vturbo.service;
+package com.fan.vturbo.example;
 
 public class Father {
 

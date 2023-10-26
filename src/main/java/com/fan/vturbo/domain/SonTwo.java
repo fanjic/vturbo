@@ -1,8 +1,8 @@
 package com.fan.vturbo.domain;
 
 
-import com.fan.vturbo.service.Father;
-import com.fan.vturbo.service.SonOne;
+import com.fan.vturbo.example.Father;
+import com.fan.vturbo.example.SonOne;
 
 public class SonTwo extends Father {
 
@@ -10,11 +10,8 @@ public class SonTwo extends Father {
         System.out.println(this.name);
 //        System.out.println(this.gender); default跨包//这里所谓不同包跨包指的是package
         System.out.println(this.height); //protect跨包
-
     }
-}
 
-class test{
     public static void main(String[] args) {
 
         Father father = new Father();
