@@ -21,7 +21,9 @@ public class ClientChat {
             selector=Selector.open();
             // 连接服务器
             socketChannel=SocketChannel.open(new InetSocketAddress("127.0.0.1",port));
+            // 设置成非阻塞模式
             socketChannel.configureBlocking(false);
+            // 注册到选择器中，由选择器进行监听管理
             socketChannel.register(selector, SelectionKey.OP_READ);
             System.out.println("客户端准备完成");
 

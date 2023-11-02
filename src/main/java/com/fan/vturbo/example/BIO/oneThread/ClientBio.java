@@ -6,7 +6,7 @@ import java.io.PrintStream;
 import java.net.Socket;
 import java.util.Scanner;
 
-public class Bioclient {
+public class ClientBio {
 
     public static void main(String[] args) throws IOException {
 

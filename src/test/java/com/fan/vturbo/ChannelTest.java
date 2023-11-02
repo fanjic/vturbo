@@ -5,6 +5,9 @@ import org.junit.jupiter.api.Test;
 import java.io.*;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
+import java.nio.file.*;
+import java.nio.file.attribute.BasicFileAttributes;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class ChannelTest {
 
@@ -88,7 +91,7 @@ public class ChannelTest {
     }
 
     @Test
-    public void fenSang(){
+    public void fenSan() {
 
         File file = new File("channelFile\\a.txt");
         try {
@@ -97,11 +100,11 @@ public class ChannelTest {
 
             ByteBuffer buffer1 = ByteBuffer.allocate(4);
             ByteBuffer buffer2 = ByteBuffer.allocate(1024);
-            ByteBuffer[] buffers={buffer1,buffer2};
+            ByteBuffer[] buffers = {buffer1, buffer2};
             isChannel.read(buffers);
             for (ByteBuffer bu : buffers) {
                 bu.flip();
-                System.out.println(new String(bu.array(),0,bu.remaining()));
+                System.out.println(new String(bu.array(), 0, bu.remaining()));
             }
 
         } catch (FileNotFoundException e) {
@@ -111,4 +114,4 @@ public class ChannelTest {
         }
     }
 
-}
+    }

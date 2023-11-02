@@ -16,12 +16,16 @@ public class ServerChat {
     // 构造器初始化对象
     public ServerChat() {
         try {
+            // 创造选择器
             selector = Selector.open();
+            // 创建服务器通道
             serverSocketChannel = ServerSocketChannel.open();
-            serverSocketChannel.configureBlocking(false);
+            // 设置服绑定端口
             serverSocketChannel.bind(new InetSocketAddress(7777));
+            // 设置成非阻塞模式
+            serverSocketChannel.configureBlocking(false);
+            // 注册到选择器中，由选择器进行监听管理
             serverSocketChannel.register(selector, SelectionKey.OP_ACCEPT);
-
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -33,7 +37,12 @@ public class ServerChat {
                 Iterator<SelectionKey> it = selector.selectedKeys().iterator();
                 while (it.hasNext()) {
 
-                    // SelectionKey管道中的事件，接入事件、读取事件
+                    /* SelectionKey管理通道的事件，例举四种事件
+                    * accept -接收到连接请求时触发
+                    * connect -客户端的，连接建立后触发
+                    * read -可读事件
+                    * write -可写事件
+                    * */
                     SelectionKey sk = it.next();
                     if (sk.isAcceptable()) {
                         SocketChannel socketChannel = serverSocketChannel.accept();
