@@ -14,6 +14,12 @@ class VturboApplicationTests {
         System.out.println(num.getAndIncrement());
         System.out.println(num);
         System.out.println(num.incrementAndGet());
+    }
+
+    @Test
+    void test() {
+
+
 
     }
 
