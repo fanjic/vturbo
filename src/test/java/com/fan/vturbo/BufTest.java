@@ -28,7 +28,6 @@ public class BufTest {
         // copy()深拷贝
         System.out.println("duplicate----->"+buf3.toString(Charset.defaultCharset()));
 
-
     }
 
 
