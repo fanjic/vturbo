@@ -27,7 +27,6 @@ public class BufTest {
         // 零拷贝不复制内存内容，指引用
         // copy()深拷贝
         System.out.println("duplicate----->"+buf3.toString(Charset.defaultCharset()));
-
     }
 
 
