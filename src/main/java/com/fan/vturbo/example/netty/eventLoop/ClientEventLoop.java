@@ -1,4 +1,4 @@
-package com.fan.vturbo.example.Netty.eventLoop;
+package com.fan.vturbo.example.netty.eventLoop;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.Channel;

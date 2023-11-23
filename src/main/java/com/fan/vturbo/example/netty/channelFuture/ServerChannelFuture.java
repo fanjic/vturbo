@@ -1,4 +1,4 @@
-package com.fan.vturbo.example.Netty.channelFuture;
+package com.fan.vturbo.example.netty.channelFuture;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.buffer.ByteBuf;
