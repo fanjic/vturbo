@@ -1,9 +1,15 @@
 package com.fan.vturbo.controller;
 
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
+@RestController
+@RequestMapping("/fan")
 public class TestController {
 
-    public void say(){
-        System.out.println("12345");
+    @RequestMapping("/say")
+    public String say(){
+        return "hello";
     }
 }
