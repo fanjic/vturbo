@@ -61,6 +61,7 @@ public class LambdaTest {
         Map<Integer, List<String>> newGroup = fruit.stream().collect(Collectors.groupingBy(fru->fru.length()));
         System.out.println("重新分组=====>");
         newGroup.forEach((k, v) -> System.out.println("长度为" + k + "的有：" + v));
+
     }
 
 }
