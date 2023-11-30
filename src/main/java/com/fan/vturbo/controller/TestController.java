@@ -1,15 +1,28 @@
 package com.fan.vturbo.controller;
 
-import org.springframework.stereotype.Controller;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.env.Environment;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/fan")
+@RequestMapping("/test")
 public class TestController {
 
-    @RequestMapping("/say")
+    @Value("${wukong.wufan}")
+    private String daughter;
+
+    @Autowired
+    private Environment environment;
+
+    // http://start.aliyun.com
+    @RequestMapping("/got")
     public String say(){
-        return "hello";
+        System.out.println(daughter);
+        System.out.println(environment.getProperty("wukong.wufan"));
+        return daughter;
     }
+
 }
