@@ -3,10 +3,12 @@ package com.fan.vturbo.entity.info;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.validation.annotation.Validated;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Validated
 public class Person {
 
     private Integer id;

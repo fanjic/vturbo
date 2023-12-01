@@ -14,7 +14,14 @@ public class PersonController {
     @Autowired
     private PersonDao personDao;
 
-    @RequestMapping("/say/{id}")
+    @RequestMapping("/say")
+    public String say(){
+        System.out.println("hello");
+
+        return "hello";
+    }
+
+    @RequestMapping("/get/{id}")
     public String getPer(@PathVariable Integer id){
         System.out.println(id);
         Person per= personDao.getPer(id);
