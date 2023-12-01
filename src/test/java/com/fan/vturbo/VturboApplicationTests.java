@@ -10,8 +10,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 @SpringBootTest
 class VturboApplicationTests {
-    @Autowired
-    private PersonDao personDao;
 
     @Test
     void contextLoads() {
