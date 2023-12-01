@@ -16,7 +16,7 @@ public class Result implements Serializable {
 
     private String message;
 
-    private List<Object> data = new ArrayList();
+    private List<Object> data = new ArrayList<>();
 
     private Result(){}
 
