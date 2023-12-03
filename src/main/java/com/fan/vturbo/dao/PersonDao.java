@@ -9,9 +9,9 @@ import java.util.List;
 @Mapper
 public interface PersonDao {
 
-    @Select("select *from person where id =#{id}")
+    // @Select("select *from person where id =#{id}")
     Person getPer(Integer id);
 
-    @Select("select *from person")
+    // @Select("select *from person")
     List<Person> getPers();
 }
