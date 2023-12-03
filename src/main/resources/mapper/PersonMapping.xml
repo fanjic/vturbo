@@ -2,11 +2,20 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.fan.vturbo.dao.PersonDao">
 
+    <resultMap id="personMap" type="com.fan.vturbo.entity.info.Person">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="name" jdbcType="VARCHAR" property="name" />
+        <result column="gender" jdbcType="VARCHAR" property="gender" />
+        <result column="age" jdbcType="INTEGER" property="age" />
+        <result column="skill" jdbcType="VARCHAR" property="skill" />
+        <result column="des" jdbcType="VARCHAR" property="des" />
+    </resultMap>
+
     <select id="getPer" resultType="com.fan.vturbo.entity.info.Person">
         select *from person where id =#{id}
     </select>
 
-    <select id="getPers" resultMap="">
+    <select id="getPers" resultMap="personMap">
         select *from person
     </select>
 

@@ -33,7 +33,6 @@ server:
   servlet:
     context-path: /vturbo
 
-
 logging:
   # 日志级别
   level:
@@ -41,3 +40,5 @@ logging:
 
 wukong:
   wufan: xiaofang
+mybatis:
+  mapper-locations: classpath:mapper/*.xml

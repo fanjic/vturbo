@@ -18,7 +18,7 @@ public class PersonServiceImpl  implements PersonService {
     private PersonDao personDao;
 
     @Override
-    @Cacheable(value = "cacheSpace", key = "#id")
+//    @Cacheable(value = "cacheSpace", key = "#id")
     public Person getPer(Integer id) {
         return personDao.getPer(id);
     }

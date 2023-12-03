@@ -1,4 +1,4 @@
-package com.fan.vturbo.domain;
+package com.fan.vturbo.example;
 
 import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;

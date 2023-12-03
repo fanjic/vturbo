@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/person")
@@ -36,5 +38,12 @@ public class PersonController {
         return per.getName();
     }
 
+    @RequestMapping("/getPers")
+    public List<Person> getPer(){
+        List<Person> pers= personService.getPers();
+        List<Person> somePer = pers.stream().filter(p->p.getName().contains("悟")).collect(Collectors.toList());
+        System.out.println(somePer);
+        return somePer;
+    }
 
 }
