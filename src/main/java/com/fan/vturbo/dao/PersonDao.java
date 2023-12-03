@@ -13,5 +13,5 @@ public interface PersonDao {
     Person getPer(Integer id);
 
     @Select("select *from person")
-    List<Person> getPers(Integer id);
+    List<Person> getPers();
 }

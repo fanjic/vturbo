@@ -5,10 +5,12 @@ import com.fan.vturbo.entity.info.Wukong;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
 @MapperScan("com.fan.vturbo.dao")
+@EnableCaching
 public class VturboApplication {
 
     public static void main(String[] args) {

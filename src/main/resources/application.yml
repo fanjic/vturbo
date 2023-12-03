@@ -9,9 +9,6 @@ spring:
 #  profiles:
 #    active: dev
 
-
-
-#redis配置
 #  redis:
 #    host: 127.0.0.1
 #    port: 6379
@@ -23,11 +20,19 @@ spring:
 #        max-idle: 8
 #        max-active: 8
 #        max-wait: -1ms
-#    password: 8690236
+#        client-type: jedis
+#        password: 8690236
+#  data:
+#    mongodb:
+#      database: vturbo
+#      host: localhost
+#      port: 27017
+
 server:
   port: 8888
   servlet:
     context-path: /vturbo
+
 
 logging:
   # 日志级别
