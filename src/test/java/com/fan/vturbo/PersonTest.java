@@ -2,6 +2,7 @@ package com.fan.vturbo;
 
 import com.fan.vturbo.dao.PersonDao;
 import com.fan.vturbo.entity.info.Person;
+import com.fan.vturbo.service.MailService;
 import org.apache.http.HttpHost;
 import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestClient;
@@ -18,8 +19,6 @@ import java.io.IOException;
 
 @SpringBootTest
 public class PersonTest {
-    @Autowired
-    private PersonDao personDao;
 
     @Resource
 //    StringRedisTemplate redis;
@@ -31,12 +30,17 @@ public class PersonTest {
 //    @Autowired
 //    private ElasticsearchRestTemplate elasticsearch;
 
-
+    @Autowired
+    private MailService mailService;
 
     @Test
     public void test() {
-        Person per= personDao.getPer(1);
-        System.out.println(per);
+
+    }
+
+    @Test
+    public void mail() {
+        mailService.sendMail();
     }
 
     @Test
